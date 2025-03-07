@@ -1,0 +1,10 @@
+08:00:08 **** Build of configuration Debug for project 16_sending_complex_data_with_queues ****
+make -j15 all 
+arm-none-eabi-size   16_sending_complex_data_with_queues.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25124	    124	  20700	  45948	   b37c	16_sending_complex_data_with_queues.elf
+Finished building: default.size.stdout
+ 
+
+08:00:08 Build Finished. 0 errors, 0 warnings. (took 321ms)
+

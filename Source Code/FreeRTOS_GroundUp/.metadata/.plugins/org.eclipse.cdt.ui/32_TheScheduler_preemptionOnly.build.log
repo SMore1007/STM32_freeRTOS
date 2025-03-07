@@ -1,0 +1,10 @@
+08:15:41 **** Incremental Build of configuration Debug for project 32_TheScheduler_preemptionOnly ****
+make -j15 all 
+arm-none-eabi-size   32_TheScheduler_preemptionOnly.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19536	     24	  20488	  40048	   9c70	32_TheScheduler_preemptionOnly.elf
+Finished building: default.size.stdout
+ 
+
+08:15:41 Build Finished. 0 errors, 0 warnings. (took 688ms)
+

@@ -1,0 +1,5 @@
+/Users/hussamaldean/STM32CubeIDE/RTOS_Course/21_counting_semaphore/Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+/Users/hussamaldean/STM32CubeIDE/RTOS_Course/21_counting_semaphore/Drivers/CMSIS/Include/core_cm4.h:1816:22:__NVIC_SetPriority	16	static
+../Core/Src/exti.c:8:6:p13_interrupt	8	static,ignoring_inline_asm
+../Core/Src/exti.c:42:6:gpio_init	4	static
+../Core/Src/exti.c:53:9:read_digital_sensor	4	static

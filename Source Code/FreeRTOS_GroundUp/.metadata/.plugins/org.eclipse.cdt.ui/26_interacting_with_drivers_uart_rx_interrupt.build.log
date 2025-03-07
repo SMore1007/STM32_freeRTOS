@@ -1,0 +1,10 @@
+08:31:58 **** Incremental Build of configuration Debug for project 26_interacting_with_drivers_uart_rx_interrupt ****
+make -j15 all 
+arm-none-eabi-size   26_interacting_with_drivers_uart_rx_interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19672	     24	  20488	  40184	   9cf8	26_interacting_with_drivers_uart_rx_interrupt.elf
+Finished building: default.size.stdout
+ 
+
+08:31:58 Build Finished. 0 errors, 0 warnings. (took 417ms)
+

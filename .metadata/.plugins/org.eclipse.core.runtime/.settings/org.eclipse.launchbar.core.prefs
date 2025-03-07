@@ -1,0 +1,10 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:02_Creating_task_from_other_task Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:03_Task_Parameters Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_Task_Creation Debug
+eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_Task_Creation\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:01_Task_Creation\ Debug/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:01_Task_Creation\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:01_Task_Creation\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:02_Creating_task_from_other_task\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

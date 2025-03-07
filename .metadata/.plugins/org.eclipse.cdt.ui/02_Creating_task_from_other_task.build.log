@@ -1,0 +1,10 @@
+22:53:05 **** Incremental Build of configuration Debug for project 02_Creating_task_from_other_task ****
+make -j16 all 
+arm-none-eabi-size  02_Creating_task_from_other_task.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20720	     16	  20488	  41224	   a108	02_Creating_task_from_other_task.elf
+Finished building: default.size.stdout
+ 
+
+22:53:06 Build Finished. 0 errors, 0 warnings. (took 380ms)
+

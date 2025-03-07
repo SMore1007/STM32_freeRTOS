@@ -1,0 +1,10 @@
+08:13:47 **** Incremental Build of configuration Debug for project 23_working_with_software_timer ****
+make -j15 all 
+arm-none-eabi-size   23_working_with_software_timer.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24392	    124	  20516	  45032	   afe8	23_working_with_software_timer.elf
+Finished building: default.size.stdout
+ 
+
+08:13:47 Build Finished. 0 errors, 0 warnings. (took 385ms)
+

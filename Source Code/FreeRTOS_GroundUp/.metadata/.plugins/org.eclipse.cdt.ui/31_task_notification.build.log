@@ -1,0 +1,10 @@
+07:51:20 **** Incremental Build of configuration Debug for project 31_task_notification ****
+make -j15 all 
+arm-none-eabi-size   31_task_notification.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23192	    124	  20500	  43816	   ab28	31_task_notification.elf
+Finished building: default.size.stdout
+ 
+
+07:51:21 Build Finished. 0 errors, 0 warnings. (took 463ms)
+

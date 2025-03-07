@@ -1,0 +1,17 @@
+08:39:53 **** Incremental Build of configuration Debug for project 18_binary_semaphores ****
+make -j15 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Core/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Drivers/CMSIS/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Middlewares/Third_Party/FreeRTOS/Source/include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "18_binary_semaphores.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/18_binary_semaphores/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="18_binary_semaphores.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 18_binary_semaphores.elf
+ 
+arm-none-eabi-size   18_binary_semaphores.elf 
+arm-none-eabi-objdump -h -S  18_binary_semaphores.elf  > "18_binary_semaphores.list"
+   text	   data	    bss	    dec	    hex	filename
+  24284	    124	  20700	  45108	   b034	18_binary_semaphores.elf
+Finished building: default.size.stdout
+ 
+Finished building: 18_binary_semaphores.list
+ 
+
+08:39:54 Build Finished. 0 errors, 0 warnings. (took 1s.1ms)
+

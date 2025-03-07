@@ -1,0 +1,11 @@
+../Core/Src/main.c:26:5:main	16	static
+../Core/Src/main.c:56:5:uart2_write	16	static
+../Core/Src/main.c:66:5:__io_putchar	16	static
+../Core/Src/main.c:74:6:redLedController	16	static
+../Core/Src/main.c:87:6:yellowLedController	16	static
+../Core/Src/main.c:100:6:blueLedController	16	static
+../Core/Src/main.c:118:6:SystemClock_Config	88	static
+../Core/Src/main.c:158:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:191:13:MX_GPIO_Init	16	static
+../Core/Src/main.c:212:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:229:6:Error_Handler	4	static,ignoring_inline_asm

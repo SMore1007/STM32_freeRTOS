@@ -1,0 +1,10 @@
+08:39:32 **** Incremental Build of configuration Debug for project 21_counting_semaphore ****
+make -j15 all 
+arm-none-eabi-size   21_counting_semaphore.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26008	    124	  20508	  46640	   b630	21_counting_semaphore.elf
+Finished building: default.size.stdout
+ 
+
+08:39:33 Build Finished. 0 errors, 0 warnings. (took 440ms)
+

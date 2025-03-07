@@ -1,0 +1,7 @@
+../Core/Src/main.c:20:5:main	16	static
+../Core/Src/main.c:44:6:polledUARTReceiver	24	static
+../Core/Src/main.c:58:6:HandlerTask	16	static
+../Core/Src/main.c:76:6:SystemClock_Config	88	static
+../Core/Src/main.c:116:13:MX_GPIO_Init	16	static
+../Core/Src/main.c:137:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:154:6:Error_Handler	4	static,ignoring_inline_asm

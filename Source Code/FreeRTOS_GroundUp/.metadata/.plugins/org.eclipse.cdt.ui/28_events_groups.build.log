@@ -1,0 +1,21 @@
+07:29:59 **** Incremental Build of configuration Debug for project 28_events_groups ****
+make -j15 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Core/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Drivers/CMSIS/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Middlewares/Third_Party/FreeRTOS/Source/include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o"
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:31:
+/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:163:2: error: invalid preprocessing directive #y
+  163 | #y
+      |  ^
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:31:
+/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:28: error: unterminated #ifndef
+   28 | #ifndef SEMAPHORE_H
+      | 
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/freertos_mpool.h:28,
+                 from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:33:
+/Users/hussamaldean/STM32CubeIDE/RTOS_Course/28_events_groups/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:28: error: unterminated #ifndef
+   28 | #ifndef SEMAPHORE_H
+      | 
+make: *** [Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk:19: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o] Error 1
+"make -j15 all" terminated with exit code 2. Build might be incomplete.
+
+07:29:59 Build Failed. 4 errors, 0 warnings. (took 409ms)
+

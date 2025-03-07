@@ -1,0 +1,20 @@
+06:23:21 **** Incremental Build of configuration Debug for project 2_Creating_tasks_from_other_tasks ****
+make -j15 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Core/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Drivers/CMSIS/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Middlewares/Third_Party/FreeRTOS/Source/include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "2_Creating_tasks_from_other_tasks.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/2_Creating_tasks_from_other_tasks/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_Creating_tasks_from_other_tasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_Creating_tasks_from_other_tasks.elf
+ 
+arm-none-eabi-size   2_Creating_tasks_from_other_tasks.elf 
+arm-none-eabi-objdump -h -S  2_Creating_tasks_from_other_tasks.elf  > "2_Creating_tasks_from_other_tasks.list"
+arm-none-eabi-objcopy  -O binary  2_Creating_tasks_from_other_tasks.elf  "2_Creating_tasks_from_other_tasks.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18984	     24	  20488	  39496	   9a48	2_Creating_tasks_from_other_tasks.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2_Creating_tasks_from_other_tasks.bin
+ 
+Finished building: 2_Creating_tasks_from_other_tasks.list
+ 
+
+06:23:22 Build Finished. 0 errors, 0 warnings. (took 669ms)
+

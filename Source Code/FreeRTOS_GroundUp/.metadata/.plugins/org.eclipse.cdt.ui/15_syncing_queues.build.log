@@ -1,0 +1,10 @@
+08:43:38 **** Incremental Build of configuration Debug for project 15_syncing_queues ****
+make -j15 all 
+arm-none-eabi-size   15_syncing_queues.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24872	    124	  20700	  45696	   b280	15_syncing_queues.elf
+Finished building: default.size.stdout
+ 
+
+08:43:39 Build Finished. 0 errors, 0 warnings. (took 316ms)
+

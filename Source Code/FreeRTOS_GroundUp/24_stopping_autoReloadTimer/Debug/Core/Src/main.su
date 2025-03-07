@@ -1,0 +1,7 @@
+../Core/Src/main.c:23:5:main	24	static
+../Core/Src/main.c:47:6:prvOneShotTImerCallback	16	static
+../Core/Src/main.c:55:6:prvAutoReloadTimerCallback	24	static
+../Core/Src/main.c:72:6:SystemClock_Config	88	static
+../Core/Src/main.c:112:13:MX_GPIO_Init	16	static
+../Core/Src/main.c:133:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:150:6:Error_Handler	4	static,ignoring_inline_asm

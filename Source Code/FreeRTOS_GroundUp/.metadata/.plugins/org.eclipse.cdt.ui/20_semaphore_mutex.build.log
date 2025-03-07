@@ -1,0 +1,17 @@
+08:37:34 **** Incremental Build of configuration Debug for project 20_semaphore_mutex ****
+make -j15 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Core/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Drivers/STM32F4xx_HAL_Driver/Inc" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Drivers/CMSIS/Include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Middlewares/Third_Party/FreeRTOS/Source/include" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2" -I"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "20_semaphore_mutex.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/hussamaldean/STM32CubeIDE/RTOS_Course/20_semaphore_mutex/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20_semaphore_mutex.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20_semaphore_mutex.elf
+ 
+arm-none-eabi-size   20_semaphore_mutex.elf 
+arm-none-eabi-objdump -h -S  20_semaphore_mutex.elf  > "20_semaphore_mutex.list"
+   text	   data	    bss	    dec	    hex	filename
+  26008	    124	  20508	  46640	   b630	20_semaphore_mutex.elf
+Finished building: default.size.stdout
+ 
+Finished building: 20_semaphore_mutex.list
+ 
+
+08:37:35 Build Finished. 0 errors, 0 warnings. (took 677ms)
+

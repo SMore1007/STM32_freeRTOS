@@ -1,0 +1,13 @@
+1650952515349	Rename resource '14_working_with_queues'
+1650952547193	Rename resource '13_idle_Task'
+1650952561190	Delete resource '14_working_with_queues/4_task_priorities.launch'
+1650952565771	Delete resource '14_working_with_queues/Debug'
+1651038199799	Delete resource '15_syncing_queues/14_working_with_queues Debug.launch'
+1651038205647	Delete resource '15_syncing_queues/Debug'
+1651038435920	Rename resource '15_syncing_queues'
+1651040605799	Delete resource '16_sending_complex_data_with_queues/Debug'
+1651040617358	Delete 2 resources
+1651122507712	Delete resource '16_sending_complex_data_with_queues/16_sending_complex_data_with_queues.launch'
+1651122515048	Delete resource '16_sending_complex_data_with_queues/Debug'
+1651209310787	Delete resource '18_binary_semaphores/16_sending_complex_data_with_queues.launch'
+1651209320264	Delete resource '18_binary_semaphores/Debug'

@@ -1,0 +1,166 @@
+#include "main.h"
+#include "cmsis_os.h"
+#include "usart.h"
+#include "gpio.h"
+#include<stdio.h>
+
+void SystemClock_Config(void);
+void MX_FREERTOS_Init(void);
+
+int __IO_putchar(int ch);
+
+// Task Prototypes
+void vLedControllerTask(void *pvParameters);
+
+typedef uint32_t TaskProfiler;
+
+#define GREEN      GPIO_PIN_12
+#define ORANGE     GPIO_PIN_13
+#define RED        GPIO_PIN_14
+#define BLUE       GPIO_PIN_15
+
+/*Define pointers*/
+const uint16_t *Green_led   = (uint16_t* ) GREEN;
+const uint16_t *Orange_led  = (uint16_t* ) ORANGE;
+const uint16_t *Red_led     = (uint16_t* ) RED;
+const uint16_t *blue_led    = (uint16_t* ) BLUE;
+
+TaskProfiler BlueTaskProfiler, RedTaskProfiler, GreenTaskProfiler, OrangeTaskProfiler;
+
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  MX_USART2_UART_Init();
+
+
+  // Create a task
+  xTaskCreate(vLedControllerTask,
+		      "Blue LED Control",
+			  100,
+			  (void *)Green_led,
+			  1,
+			  NULL);
+
+  // Create a task
+  xTaskCreate(vLedControllerTask,
+		      "Red LED Control",
+			  100,
+			  (void *)Orange_led,
+			  1,
+			  NULL);
+  // Create a task
+  xTaskCreate(vLedControllerTask,
+		      "Green LED Control",
+			  100,
+			  (void *)Red_led,
+			  1,
+			  NULL);
+
+  // Create a task
+  xTaskCreate(vLedControllerTask,
+		      "Orange LED Control",
+			  100,
+			  (void *)blue_led,
+			  1,
+			  NULL);
+  // Manage the task using task scheduler
+  vTaskStartScheduler();
+
+
+
+  // Main while loop
+  while (1)
+  {
+//	  printf("Hello From STM32Cube IDE\r\n");
+  }
+} // main function end
+
+
+void vLedControllerTask(void *pvParameters)
+{
+
+	int i;
+	while(1)
+	{
+//		printf("Blue LED Task\r\n");
+//		BlueTaskProfiler++;
+		HAL_GPIO_TogglePin(GPIOD, (uint16_t *)pvParameters);
+		for(i = 0; i < 60000; i++)
+		{
+
+		}
+	}
+}
+
+
+
+int __io_putchar(int ch)
+{
+	HAL_UART_Transmit(&huart2, (uint8_t *) &ch, 1, 0xFFFF);
+	return ch;
+}
+
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  __HAL_RCC_PWR_CLK_ENABLE();
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
+
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 16;
+  RCC_OscInitStruct.PLL.PLLN = 336;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLR = 2;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+
+  if (htim->Instance == TIM1) {
+    HAL_IncTick();
+  }
+}
+
+
+void Error_Handler(void)
+{
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
+}
+
+#ifdef  USE_FULL_ASSERT
+
+void assert_failed(uint8_t *file, uint32_t line)
+{
+
+}
+#endif /* USE_FULL_ASSERT */
