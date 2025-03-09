@@ -1,1 +1,1 @@
-# STM32_freeRTOS
+# STM32_freeRTOS Course Work
