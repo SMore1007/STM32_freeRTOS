@@ -38,15 +38,15 @@ int main(void)
 		      "Red LED Control",
 			  100,
 			  NULL,
-			  1,
+			  3,
 			  NULL);
-//  // Create a task
-//  xTaskCreate(vGreenLedControllerTask,
-//		      "Green LED Control",
-//			  100,
-//			  NULL,
-//			  1,
-//			  NULL);
+  // Create a task
+  xTaskCreate(vGreenLedControllerTask,
+		      "Green LED Control",
+			  100,
+			  NULL,
+			  3,
+			  NULL);
 
   // Manage the task using task scheduler
   vTaskStartScheduler();
@@ -66,8 +66,8 @@ void vBlueLedControllerTask(void *pvParameters)
 {
 	while(1)
 	{
-		printf("Blue LED Task\r\n");
-//		BlueTaskProfiler++;
+//		printf("Blue LED Task\r\n");
+		BlueTaskProfiler++;
 
 	}
 }
@@ -76,8 +76,8 @@ void vRedLedControllerTask(void *pvParameters)
 {
 	while(1)
 	{
-		printf("Red LED Task\r\n");
-//		RedTaskProfiler++;
+//		printf("Red LED Task\r\n");
+		RedTaskProfiler++;
 	}
 }
 
@@ -101,8 +101,6 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** Configure the main internal regulator output voltage
-  */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
 

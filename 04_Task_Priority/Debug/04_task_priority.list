@@ -644,8 +644,6 @@ void SystemClock_Config(void)
  80006b8:	60da      	str	r2, [r3, #12]
  80006ba:	611a      	str	r2, [r3, #16]
 
-  /** Configure the main internal regulator output voltage
-  */
   __HAL_RCC_PWR_CLK_ENABLE();
  80006bc:	2300      	movs	r3, #0
  80006be:	607b      	str	r3, [r7, #4]

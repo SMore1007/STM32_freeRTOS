@@ -27,7 +27,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-void uart2_write(int ch);
+
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
