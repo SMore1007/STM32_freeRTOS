@@ -40,13 +40,13 @@ int main(void)
 			  NULL,
 			  1,
 			  NULL);
-//  // Create a task
-//  xTaskCreate(vGreenLedControllerTask,
-//		      "Green LED Control",
-//			  100,
-//			  NULL,
-//			  1,
-//			  NULL);
+  // Create a task
+  xTaskCreate(vGreenLedControllerTask,
+		      "Green LED Control",
+			  100,
+			  NULL,
+			  1,
+			  NULL);
 
   // Manage the task using task scheduler
   vTaskStartScheduler();
@@ -66,8 +66,8 @@ void vBlueLedControllerTask(void *pvParameters)
 {
 	while(1)
 	{
-		printf("Blue LED Task\r\n");
-//		BlueTaskProfiler++;
+//		printf("Blue LED Task\r\n");
+		BlueTaskProfiler++;
 
 	}
 }
@@ -76,8 +76,8 @@ void vRedLedControllerTask(void *pvParameters)
 {
 	while(1)
 	{
-		printf("Red LED Task\r\n");
-//		RedTaskProfiler++;
+//		printf("Red LED Task\r\n");
+		RedTaskProfiler++;
 	}
 }
 
