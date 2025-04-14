@@ -77,7 +77,8 @@ Memory Management & Performance
 
     What is dynamic memory allocation in RTOS?
 
-    Dynamic memory allocation assigns memory at runtime using functions like malloc(), but it's often avoided due to fragmentation risks.
+    Dynamic memory allocation assigns memory at runtime using functions like malloc(), 
+    but it's often avoided due to fragmentation risks.
 
     What is a real-time clock (RTC)?
 
@@ -93,4 +94,5 @@ Memory Management & Performance
 
     What is context switching in RTOS?
 
-    Context switching is the process of saving the state of a running task and restoring another task's state.
+    Context switching is the process of saving the state of a running task and restoring 
+    another task's state.
