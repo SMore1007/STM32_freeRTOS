@@ -1,3 +1,4 @@
+
 #include "main.h"
 #include "cmsis_os.h"
 #include "usart.h"
@@ -26,12 +27,12 @@ int main(void)
 
 
   // Create a task
-  xTaskCreate(vBlueLedControllerTask,
-		      "Blue LED Control",
-			  100,
-			  NULL,
-			  1,
-			  NULL);
+  xTaskCreate(vBlueLedControllerTask,   // Task function
+		      "Blue LED Control",       // Task description
+			  100,                      // Amount of stack size
+			  NULL,                     // Task parameters if any
+			  1,                        // Priority if the task
+			  NULL);                    // Task handle
 
   // Create a task
   xTaskCreate(vRedLedControllerTask,
@@ -66,7 +67,7 @@ void vBlueLedControllerTask(void *pvParameters)
 {
 	while(1)
 	{
-//		printf("Blue LED Task\r\n");
+		//printf("Blue LED Task\r\n");
 		BlueTaskProfiler++;
 
 	}
@@ -76,7 +77,7 @@ void vRedLedControllerTask(void *pvParameters)
 {
 	while(1)
 	{
-//		printf("Red LED Task\r\n");
+		//printf("Red LED Task\r\n");
 		RedTaskProfiler++;
 	}
 }
@@ -85,6 +86,7 @@ void vGreenLedControllerTask(void *pvParameters)
 {
 	while(1)
 	{
+		//printf("Green LED Task\r\n");
 		GreenTaskProfiler++;
 	}
 }
