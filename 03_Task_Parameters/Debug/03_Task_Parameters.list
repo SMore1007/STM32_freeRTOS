@@ -27,25 +27,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00007020  2**0
                   CONTENTS, READONLY
- 12 .debug_info   0001721a  00000000  00000000  00007050  2**0
+ 12 .debug_info   00017224  00000000  00000000  00007050  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 000034bc  00000000  00000000  0001e26a  2**0
+ 13 .debug_abbrev 000034bc  00000000  00000000  0001e274  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00001458  00000000  00000000  00021728  2**3
+ 14 .debug_aranges 00001458  00000000  00000000  00021730  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_rnglists 00000fce  00000000  00000000  00022b80  2**0
+ 15 .debug_rnglists 00000fce  00000000  00000000  00022b88  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00003c66  00000000  00000000  00023b4e  2**0
+ 16 .debug_macro  00003c66  00000000  00000000  00023b56  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000179cc  00000000  00000000  000277b4  2**0
+ 17 .debug_line   000179cc  00000000  00000000  000277bc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000db231  00000000  00000000  0003f180  2**0
+ 18 .debug_str    000db231  00000000  00000000  0003f188  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  0011a3b1  2**0
+ 19 .comment      00000043  00000000  00000000  0011a3b9  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00005570  00000000  00000000  0011a3f4  2**2
+ 20 .debug_frame  00005570  00000000  00000000  0011a3fc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000053  00000000  00000000  0011f964  2**0
+ 21 .debug_line_str 00000053  00000000  00000000  0011f96c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -527,9 +527,9 @@ void MX_GPIO_Init(void)
  8000644:	40020c00 	.word	0x40020c00
 
 08000648 <main>:
+const uint16_t *Orange_led  = (uint16_t* ) ORANGE;
+const uint16_t *Red_led     = (uint16_t* ) RED;
 const uint16_t *blue_led    = (uint16_t* ) BLUE;
-
-TaskProfiler BlueTaskProfiler, RedTaskProfiler, GreenTaskProfiler, OrangeTaskProfiler;
 
 int main(void)
 {
@@ -642,7 +642,6 @@ void vLedControllerTask(void *pvParameters)
  80006e6:	b084      	sub	sp, #16
  80006e8:	af00      	add	r7, sp, #0
  80006ea:	6078      	str	r0, [r7, #4]
-	int i;
 	while(1)
 	{
 //		printf("Blue LED Task\r\n");
@@ -653,7 +652,7 @@ void vLedControllerTask(void *pvParameters)
  80006f0:	4619      	mov	r1, r3
  80006f2:	4807      	ldr	r0, [pc, #28]	@ (8000710 <vLedControllerTask+0x2c>)
  80006f4:	f000 fcd7 	bl	80010a6 <HAL_GPIO_TogglePin>
-		for(i = 0; i < 60000; i++)
+		for(int i = 0; i < 60000; i++)
  80006f8:	2300      	movs	r3, #0
  80006fa:	60fb      	str	r3, [r7, #12]
  80006fc:	e002      	b.n	8000704 <vLedControllerTask+0x20>
@@ -802,7 +801,6 @@ void SystemClock_Config(void)
  80007ec:	40007000 	.word	0x40007000
 
 080007f0 <HAL_TIM_PeriodElapsedCallback>:
-
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {

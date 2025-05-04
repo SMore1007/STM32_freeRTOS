@@ -13,6 +13,7 @@ int __IO_putchar(int ch);
 void vLedControllerTask(void *pvParameters);
 
 typedef uint32_t TaskProfiler;
+TaskProfiler BlueTaskProfiler, RedTaskProfiler, GreenTaskProfiler, OrangeTaskProfiler;
 
 #define GREEN      GPIO_PIN_12
 #define ORANGE     GPIO_PIN_13
@@ -24,8 +25,6 @@ const uint16_t *Green_led   = (uint16_t* ) GREEN;
 const uint16_t *Orange_led  = (uint16_t* ) ORANGE;
 const uint16_t *Red_led     = (uint16_t* ) RED;
 const uint16_t *blue_led    = (uint16_t* ) BLUE;
-
-TaskProfiler BlueTaskProfiler, RedTaskProfiler, GreenTaskProfiler, OrangeTaskProfiler;
 
 int main(void)
 {
@@ -80,18 +79,18 @@ int main(void)
 
 void vLedControllerTask(void *pvParameters)
 {
-
-	int i;
 	while(1)
 	{
 //		printf("Blue LED Task\r\n");
 //		BlueTaskProfiler++;
 		HAL_GPIO_TogglePin(GPIOD, (uint16_t *)pvParameters);
-		for(i = 0; i < 60000; i++)
+		for(int i = 0; i < 60000; i++)
 		{
 
 		}
 	}
+
+
 }
 
 
