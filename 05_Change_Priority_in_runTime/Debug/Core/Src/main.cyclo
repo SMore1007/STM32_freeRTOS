@@ -4,5 +4,5 @@
 ../Core/Src/main.c:94:6:vGreenLedControllerTask	1
 ../Core/Src/main.c:102:5:__io_putchar	1
 ../Core/Src/main.c:109:6:SystemClock_Config	3
-../Core/Src/main.c:153:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:164:6:Error_Handler	1
+../Core/Src/main.c:150:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:161:6:Error_Handler	1

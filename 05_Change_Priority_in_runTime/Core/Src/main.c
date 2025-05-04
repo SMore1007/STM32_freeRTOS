@@ -17,7 +17,7 @@ typedef uint32_t TaskProfiler;
 
 TaskProfiler BlueTaskProfiler,RedTaskProfiler,GreenTaskProfiler;
 
-//typedef uint23_t TaskHandle_t;
+
 
 TaskHandle_t blue_handle, red_handle, green_handle;
 
@@ -35,7 +35,7 @@ int main(void)
 		      "Blue LED Control",      // Task Name for our understanding
 			  100,                     // Task depth size
 			  NULL,                    // Task Parameters if any
-			  3,                       // Task Priority
+			  2,                       // Task Priority
 			  &blue_handle);                   // Task handle (NULL if not required to store task handle)
 
   // Create a task for controlling the Red LED
@@ -44,7 +44,7 @@ int main(void)
       "Red LED Control",     // Name of the task (for debugging and monitoring)
       100,                   // Stack size allocated for the task (in words, not bytes)
       NULL,                  // Parameter passed to the task (NULL if no parameter is needed)
-      3,                     // Task priority (Higher value = Higher priority)
+      2,                     // Task priority (Higher value = Higher priority)
       &red_handle);                  // Task handle (NULL if not required to store task handle)
 
 

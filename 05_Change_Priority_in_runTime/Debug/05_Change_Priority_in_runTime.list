@@ -480,7 +480,7 @@ int main(void)
   xTaskCreate(vBlueLedControllerTask,  // Task Function like our main()
  80005d6:	4b11      	ldr	r3, [pc, #68]	@ (800061c <main+0x5c>)
  80005d8:	9301      	str	r3, [sp, #4]
- 80005da:	2303      	movs	r3, #3
+ 80005da:	2302      	movs	r3, #2
  80005dc:	9300      	str	r3, [sp, #0]
  80005de:	2300      	movs	r3, #0
  80005e0:	2264      	movs	r2, #100	@ 0x64
@@ -488,21 +488,21 @@ int main(void)
  80005e4:	480f      	ldr	r0, [pc, #60]	@ (8000624 <main+0x64>)
  80005e6:	f002 feff 	bl	80033e8 <xTaskCreate>
 			  NULL,                    // Task Parameters if any
-			  3,                       // Task Priority
+			  2,                       // Task Priority
 			  &blue_handle);                   // Task handle (NULL if not required to store task handle)
 
   // Create a task for controlling the Red LED
   xTaskCreate(
  80005ea:	4b0f      	ldr	r3, [pc, #60]	@ (8000628 <main+0x68>)
  80005ec:	9301      	str	r3, [sp, #4]
- 80005ee:	2303      	movs	r3, #3
+ 80005ee:	2302      	movs	r3, #2
  80005f0:	9300      	str	r3, [sp, #0]
  80005f2:	2300      	movs	r3, #0
  80005f4:	2264      	movs	r2, #100	@ 0x64
  80005f6:	490d      	ldr	r1, [pc, #52]	@ (800062c <main+0x6c>)
  80005f8:	480d      	ldr	r0, [pc, #52]	@ (8000630 <main+0x70>)
  80005fa:	f002 fef5 	bl	80033e8 <xTaskCreate>
-      3,                     // Task priority (Higher value = Higher priority)
+      2,                     // Task priority (Higher value = Higher priority)
       &red_handle);                  // Task handle (NULL if not required to store task handle)
 
 
@@ -684,9 +684,6 @@ void SystemClock_Config(void)
  800070c:	603b      	str	r3, [r7, #0]
  800070e:	683b      	ldr	r3, [r7, #0]
 
-  /** Initializes the RCC Oscillators according to the specified parameters
-  * in the RCC_OscInitTypeDef structure.
-  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
  8000710:	2302      	movs	r3, #2
  8000712:	61fb      	str	r3, [r7, #28]
