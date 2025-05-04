@@ -51,14 +51,14 @@ int main(void)
 
 void vBlueLedControllerTask(void *pvParameters)
 {
-	  // Create a task
+	  // Create a  vRedLedController Task
 	  xTaskCreate(vRedLedControllerTask,
 			      "Red LED Control",
 				  100,
 				  NULL,
 				  1,
 				  NULL);
-	  // Create a task
+	  // Create a vGreenLedController Task
 	  xTaskCreate(vGreenLedControllerTask,
 			      "Green LED Control",
 				  100,
