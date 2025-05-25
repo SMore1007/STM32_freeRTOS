@@ -54,10 +54,38 @@ STM32CubeMX/
 ## 💡 Code Snippet
 
 ```c
-
+// Task creation
 xTaskCreate(blueLedControllerTask, "Blue LED Controller Task", 100, NULL, 1, NULL);
 xTaskCreate(redLedControllerTask, "Red Led Controller", 100, NULL, 1, NULL);
+
+// Task Schedular
 vTaskStartScheduler();
+
+/* independant thread/Task/function Definitions */
+
+// Task 1
+void blueLedControllerTask(void *pvParameters)
+{
+
+	while(1)
+	{
+		redProfilerCounter++;
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+		for(int i = 0; i < 1000000; i++){}
+	}
+}
+
+// Task 2
+void redLedControllerTask(void *pvParameters)
+{
+	while(1)
+	{
+		blueProfilerCounter++;
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
+		for(int i = 0; i < 1000000; i++){}
+	}
+}
+
 ```
 ---
 📷 Demo
