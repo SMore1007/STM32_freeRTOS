@@ -26,7 +26,7 @@ Two LEDs connected to GPIO pins **PA5** and **PA6** are toggled independently vi
 ---
 
 ## 📁 Project Structure
-
+```
 Core/
 ├── Src/
 │ ├── main.c # Contains task creation and logic
@@ -38,7 +38,7 @@ Middlewares/
 ├── FreeRTOS/ # FreeRTOS kernel files
 STM32CubeMX/
 ├── *.ioc # CubeMX project file (if used)
-
+```
 
 ---
 
