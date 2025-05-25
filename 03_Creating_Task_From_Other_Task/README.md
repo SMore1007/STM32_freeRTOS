@@ -96,34 +96,34 @@ void redLedControllerTask(void *pvParameters)
 
 ## 📚 What I Learned
 
-    - Basics of FreeRTOS task management
+- Basics of FreeRTOS task management
 
-    - Importance of non-blocking design in real-time systems
+- Importance of non-blocking design in real-time systems
 
-    - Initial hands-on with STM32 HAL and FreeRTOS integration
+- Initial hands-on with STM32 HAL and FreeRTOS integration
 
 
 ---
 
 ## Future Improvements
 
-    - Replace busy-wait loops with vTaskDelay()
+- Replace busy-wait loops with vTaskDelay()
 
-    - Use semaphores or mutexes for shared resources
+- Use semaphores or mutexes for shared resources
 
-    - Add inter-task communication (queues, event groups)
+- Add inter-task communication (queues, event groups)
 
-    - Integrate ISRs with FreeRTOS APIs
+- Integrate ISRs with FreeRTOS APIs
 
-    - Expand to real-world applications like sensor control or IoT tasks
+- Expand to real-world applications like sensor control or IoT tasks
 
 ---
 
 
 ## Requirements
 
-    - STM32 board (e.g., STM32F401RE or compatible)
+- STM32 board (e.g., STM32F401RE or compatible)
 
-    - STM32CubeIDE or another STM32 development environment
+- STM32CubeIDE or another STM32 development environment
 
-    - Basic knowledge of C and embedded programming
+- Basic knowledge of C and embedded programming
