@@ -94,13 +94,18 @@ void redLedControllerTask(void *pvParameters)
 
 ---
 
-📚 What I Learned
+
+---
+
+## 📚 What I Learned
 
     Basics of FreeRTOS task management
 
     Importance of non-blocking design in real-time systems
 
     Initial hands-on with STM32 HAL and FreeRTOS integration
+
+---
 
 ---
 
@@ -115,7 +120,9 @@ void redLedControllerTask(void *pvParameters)
     Integrate ISRs with FreeRTOS APIs
 
     Expand to real-world applications like sensor control or IoT tasks
+
 ---
+
 
 ## Requirements
 
@@ -124,3 +131,5 @@ void redLedControllerTask(void *pvParameters)
     STM32CubeIDE or another STM32 development environment
 
     Basic knowledge of C and embedded programming
+
+---
