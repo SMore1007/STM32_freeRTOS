@@ -1,8 +1,0 @@
-../Core/Src/main.c:28:5:main	16	static
-../Core/Src/main.c:76:6:vBlueLedControllerTask	16	static
-../Core/Src/main.c:86:6:vRedLedControllerTask	16	static
-../Core/Src/main.c:98:6:vGreenLedControllerTask	16	static
-../Core/Src/main.c:111:5:__io_putchar	16	static
-../Core/Src/main.c:118:6:SystemClock_Config	88	static
-../Core/Src/main.c:162:6:HAL_TIM_PeriodElapsedCallback	16	static
-../Core/Src/main.c:171:6:Error_Handler	4	static,ignoring_inline_asm
