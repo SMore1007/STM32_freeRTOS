@@ -104,7 +104,7 @@ void redLedControllerTask(void *pvParameters)
 
 ---
 
-🛠 Future Improvements
+## Future Improvements
 
     Replace busy-wait loops with vTaskDelay()
 
@@ -116,11 +116,11 @@ void redLedControllerTask(void *pvParameters)
 
     Expand to real-world applications like sensor control or IoT tasks
 ---
-✅ Requirements
+
+## Requirements
 
     STM32 board (e.g., STM32F401RE or compatible)
 
     STM32CubeIDE or another STM32 development environment
 
     Basic knowledge of C and embedded programming
----
