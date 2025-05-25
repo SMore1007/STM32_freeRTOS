@@ -62,7 +62,7 @@ vTaskStartScheduler();
 ---
 📷 Demo
 
-    🎥 A short demo of this project in action can be found [https://youtu.be/vNYEzkMgZIQ].
+    https://youtu.be/vNYEzkMgZIQ
 
 ---
 
