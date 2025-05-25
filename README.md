@@ -1,7 +1,5 @@
 # Real Time Operating System 
 
-## RTOS Interview Questions
-
 ### Basic RTOS Concepts
 
     What is an RTOS?
