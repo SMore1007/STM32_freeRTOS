@@ -54,13 +54,17 @@ STM32CubeMX/
 ## 💡 Code Snippet
 
 ```c
+
 xTaskCreate(blueLedControllerTask, "Blue LED Controller Task", 100, NULL, 1, NULL);
 xTaskCreate(redLedControllerTask, "Red Led Controller", 100, NULL, 1, NULL);
 vTaskStartScheduler();
-
+```
+---
 📷 Demo
 
-    🎥 A short demo of this project in action can be found [insert video link here].
+    🎥 A short demo of this project in action can be found [https://youtu.be/vNYEzkMgZIQ].
+
+---
 
 📚 What I Learned
 
@@ -69,6 +73,8 @@ vTaskStartScheduler();
     Importance of non-blocking design in real-time systems
 
     Initial hands-on with STM32 HAL and FreeRTOS integration
+
+---
 
 🛠 Future Improvements
 
@@ -81,7 +87,7 @@ vTaskStartScheduler();
     Integrate ISRs with FreeRTOS APIs
 
     Expand to real-world applications like sensor control or IoT tasks
-
+---
 ✅ Requirements
 
     STM32 board (e.g., STM32F401RE or compatible)
@@ -89,3 +95,4 @@ vTaskStartScheduler();
     STM32CubeIDE or another STM32 development environment
 
     Basic knowledge of C and embedded programming
+---
