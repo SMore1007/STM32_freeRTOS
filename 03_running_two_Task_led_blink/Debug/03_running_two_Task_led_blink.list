@@ -1,5 +1,5 @@
 
-03_Creating_Task_From_Other_Task.elf:     file format elf32-littlearm
+03_running_two_Task_led_blink.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -478,10 +478,10 @@ void redLedControllerTask(void *pvParameters)
  80005cc:	000f423f 	.word	0x000f423f
 
 080005d0 <SystemClock_Config>:
-/**
   * @brief System Clock Configuration
   * @retval None
   */
+
 void SystemClock_Config(void)
 {
  80005d0:	b580      	push	{r7, lr}

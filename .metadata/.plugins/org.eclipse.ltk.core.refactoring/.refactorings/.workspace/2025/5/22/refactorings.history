@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;03_Creating_Task_From_Other_Task&apos; to &apos;03_running_two_Task_led_blink&apos;" description="Rename resource &apos;03_Creating_Task_From_Other_Task&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/03_Creating_Task_From_Other_Task" name="03_running_two_Task_led_blink" stamp="1748232616224" updateReferences="true"/>
+</session>
