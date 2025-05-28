@@ -36,7 +36,7 @@ int main(void)
 			  "Blue LED Controller ",	// Task Understandable Name
 			   100,                     // Task Depth(Task Size)
 			   NULL,                    // Task Function parameters any
-			   2,                       // TAsk Priority
+			   1,                       // TAsk Priority
 			   NULL);                   // Task Handle (for runtime control)
 
 
@@ -79,12 +79,13 @@ void blueLEDControllerTask(void *pvParameters)
 {
 
 	// Setup code for the task
-
+	printf("Blue LED\r\n");
 	// task loop
 
 	while(1)
 	{
-		RedLedCounter++;
+		BlueLedCounter++;
+
 		//printf("Blue LED Task running\r\n");
 	}
 
@@ -97,12 +98,12 @@ void redLEDControllerTask(void *pvParameters)
 {
 
 	// Setup code for the task
-
+	printf("Red LED\r\n");
 	// task loop
 
 	while(1)
 	{
-		BlueLedCounter++;
+		RedLedCounter++;
 		//printf("Red LED Task running\r\n");
 	}
 
