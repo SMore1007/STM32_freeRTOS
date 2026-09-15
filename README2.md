@@ -241,7 +241,7 @@ void vFunction(int x)                   /* 'x' placed on Stack */
 ```c
 char str[20] = "hello";
 printf("%zu\n", sizeof(str)); /* Output: 20 (array allocation capacity) */
-printf("%zu\n", strlen(str)); /* Output: 8  (character count before '\0') */
+printf("%zu\n", strlen(str)); /* Output: 5  (character count before '\0') */
 ```
 
 ---
